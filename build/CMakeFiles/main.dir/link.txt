@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o main -Wl,-rpath,/home/andrii/Documents/Project/cpp/calculator_gitlab/build libcalculator.so libmath_functions.so 

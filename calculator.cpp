@@ -2,7 +2,7 @@
 
 int Calculator::Add (double a, double b)
 {
-    return a + b + 0.5;
+    return a + b;
 }
 
 int Calculator::Sub (double a, double b)
@@ -12,7 +12,7 @@ int Calculator::Sub (double a, double b)
 
 int Calculator::Mul (double a, double b)
 {
-    return a * b + 0.5;
+    return a * b;
 }
 
 int Calculator::Pow (int a, int b)
@@ -24,4 +24,3 @@ int Calculator::Pow (int a, int b)
    if(b%2 == 0) return temp * temp;
    else return a * temp * temp;
 }
-
