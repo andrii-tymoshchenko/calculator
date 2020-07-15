@@ -6,11 +6,13 @@ set (main_src
 set (calculator_src
      calculator.cpp)
 
-set (math_functions_src
-     math_functions.cpp)
+set (helper_src
+     helper.cpp)
+
+#add_definitions(-DUSE_STRING_FUNC)
 
 add_library (calculator SHARED ${calculator_src})
-add_library (math_functions SHARED ${math_functions_src})
+add_library (math_functions SHARED ${helper_src})
 
 add_executable(main ${main_src})
 

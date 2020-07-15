@@ -1,5 +1,0 @@
-/home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/rebuild_cache.dir
-/home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/calculator.dir
-/home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/edit_cache.dir
-/home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/main.dir
-/home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/math_functions.dir

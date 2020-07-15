@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andrii/Documents/Project/cpp/calculator_gitlab
+CMAKE_SOURCE_DIR = /home/andrii/Documents/Project/cpp/cpp_homework/calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andrii/Documents/Project/cpp/calculator_gitlab/build
+CMAKE_BINARY_DIR = /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles /home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/CMakeFiles /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,33 @@ calculator.cpp.s:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator.cpp.s
 .PHONY : calculator.cpp.s
 
+helper.o: helper.cpp.o
+
+.PHONY : helper.o
+
+# target to build an object file
+helper.cpp.o:
+	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/helper.cpp.o
+.PHONY : helper.cpp.o
+
+helper.i: helper.cpp.i
+
+.PHONY : helper.i
+
+# target to preprocess a source file
+helper.cpp.i:
+	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/helper.cpp.i
+.PHONY : helper.cpp.i
+
+helper.s: helper.cpp.s
+
+.PHONY : helper.s
+
+# target to generate assembly for a file
+helper.cpp.s:
+	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/helper.cpp.s
+.PHONY : helper.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -203,33 +230,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-math_functions.o: math_functions.cpp.o
-
-.PHONY : math_functions.o
-
-# target to build an object file
-math_functions.cpp.o:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/math_functions.cpp.o
-.PHONY : math_functions.cpp.o
-
-math_functions.i: math_functions.cpp.i
-
-.PHONY : math_functions.i
-
-# target to preprocess a source file
-math_functions.cpp.i:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/math_functions.cpp.i
-.PHONY : math_functions.cpp.i
-
-math_functions.s: math_functions.cpp.s
-
-.PHONY : math_functions.s
-
-# target to generate assembly for a file
-math_functions.cpp.s:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/math_functions.cpp.s
-.PHONY : math_functions.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -244,12 +244,12 @@ help:
 	@echo "... calculator.o"
 	@echo "... calculator.i"
 	@echo "... calculator.s"
+	@echo "... helper.o"
+	@echo "... helper.i"
+	@echo "... helper.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... math_functions.o"
-	@echo "... math_functions.i"
-	@echo "... math_functions.s"
 .PHONY : help
 
 
