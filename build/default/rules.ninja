@@ -80,7 +80,7 @@ rule CXX_SHARED_LIBRARY_LINKER__math_functions
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -H/home/andrii/Documents/Project/cpp/calculator_gitlab -B/home/andrii/Documents/Project/cpp/calculator_gitlab/build/default
+  command = /usr/bin/cmake -H/home/andrii/Documents/Project/cpp/cpp_homework/calculator -B/home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/default
   description = Re-running CMake...
   generator = 1
 

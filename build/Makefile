@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andrii/Documents/Project/cpp/calculator_gitlab
+CMAKE_SOURCE_DIR = /home/andrii/Documents/Project/cpp/cpp_homework/calculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andrii/Documents/Project/cpp/calculator_gitlab/build
+CMAKE_BINARY_DIR = /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles /home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/CMakeFiles /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/calculator_gitlab/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

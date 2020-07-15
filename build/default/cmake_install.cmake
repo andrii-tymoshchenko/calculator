@@ -1,4 +1,4 @@
-# Install script for directory: /home/andrii/Documents/Project/cpp/calculator_gitlab
+# Install script for directory: /home/andrii/Documents/Project/cpp/cpp_homework/calculator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/andrii/Documents/Project/cpp/calculator_gitlab/build/default/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/andrii/Documents/Project/cpp/cpp_homework/calculator/build/default/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
