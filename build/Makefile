@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named calculator
-
-# Build rule for target.
-calculator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 calculator
-.PHONY : calculator
-
-# fast build rule for target.
-calculator/fast:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
-.PHONY : calculator/fast
-
-#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -137,17 +124,30 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named math_functions
+# Target rules for targets named calculator
 
 # Build rule for target.
-math_functions: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 math_functions
-.PHONY : math_functions
+calculator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calculator
+.PHONY : calculator
 
 # fast build rule for target.
-math_functions/fast:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/build
-.PHONY : math_functions/fast
+calculator/fast:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
+.PHONY : calculator/fast
+
+#=============================================================================
+# Target rules for targets named helper
+
+# Build rule for target.
+helper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 helper
+.PHONY : helper
+
+# fast build rule for target.
+helper/fast:
+	$(MAKE) -f CMakeFiles/helper.dir/build.make CMakeFiles/helper.dir/build
+.PHONY : helper/fast
 
 calculator.o: calculator.cpp.o
 
@@ -182,7 +182,7 @@ helper.o: helper.cpp.o
 
 # target to build an object file
 helper.cpp.o:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/helper.cpp.o
+	$(MAKE) -f CMakeFiles/helper.dir/build.make CMakeFiles/helper.dir/helper.cpp.o
 .PHONY : helper.cpp.o
 
 helper.i: helper.cpp.i
@@ -191,7 +191,7 @@ helper.i: helper.cpp.i
 
 # target to preprocess a source file
 helper.cpp.i:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/helper.cpp.i
+	$(MAKE) -f CMakeFiles/helper.dir/build.make CMakeFiles/helper.dir/helper.cpp.i
 .PHONY : helper.cpp.i
 
 helper.s: helper.cpp.s
@@ -200,7 +200,7 @@ helper.s: helper.cpp.s
 
 # target to generate assembly for a file
 helper.cpp.s:
-	$(MAKE) -f CMakeFiles/math_functions.dir/build.make CMakeFiles/math_functions.dir/helper.cpp.s
+	$(MAKE) -f CMakeFiles/helper.dir/build.make CMakeFiles/helper.dir/helper.cpp.s
 .PHONY : helper.cpp.s
 
 main.o: main.cpp.o
@@ -237,10 +237,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... calculator"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... math_functions"
+	@echo "... calculator"
+	@echo "... helper"
 	@echo "... calculator.o"
 	@echo "... calculator.i"
 	@echo "... calculator.s"
