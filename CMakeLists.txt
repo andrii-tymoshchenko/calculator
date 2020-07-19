@@ -13,8 +13,13 @@ if(USE_STRING_FUNC)
    add_definitions(-DUSE_STRING_FUNC)
 endif()
 
-add_library (calculator SHARED ${calculator_src})
-add_library (helper SHARED ${helper_src})
+if(SHAREDLIB)
+  add_library (calculator SHARED ${calculator_src})
+  add_library (helper SHARED ${helper_src})
+else()
+  add_library (calculator ${calculator_src})
+  add_library (helper ${helper_src})
+endif()
 
 add_executable(main ${main_src})
 
