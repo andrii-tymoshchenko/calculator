@@ -1,26 +1,13 @@
-cmake_minimum_required (VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.12)
 
-set (main_src
-     main.cpp)
+project(HW_4)
 
-set (calculator_src
-     calculator.cpp)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-set (helper_src
-     helper.cpp)
+add_executable(${PROJECT_NAME} "main.cpp")
 
-if(USE_STRING_FUNC)
-   add_definitions(-DUSE_STRING_FUNC)
-endif()
 
-if(SHAREDLIB)
-  add_library (calculator SHARED ${calculator_src})
-  add_library (helper SHARED ${helper_src})
-else()
-  add_library (calculator ${calculator_src})
-  add_library (helper ${helper_src})
-endif()
-
-add_executable(main ${main_src})
-
-target_link_libraries (main calculator helper)
