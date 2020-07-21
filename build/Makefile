@@ -111,32 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named calculator
-
-# Build rule for target.
-calculator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 calculator
-.PHONY : calculator
-
-# fast build rule for target.
-calculator/fast:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/build
-.PHONY : calculator/fast
-
-#=============================================================================
 # Target rules for targets named helper
 
 # Build rule for target.
@@ -149,32 +123,18 @@ helper/fast:
 	$(MAKE) -f CMakeFiles/helper.dir/build.make CMakeFiles/helper.dir/build
 .PHONY : helper/fast
 
-calculator.o: calculator.cpp.o
+#=============================================================================
+# Target rules for targets named HW_5
 
-.PHONY : calculator.o
+# Build rule for target.
+HW_5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HW_5
+.PHONY : HW_5
 
-# target to build an object file
-calculator.cpp.o:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator.cpp.o
-.PHONY : calculator.cpp.o
-
-calculator.i: calculator.cpp.i
-
-.PHONY : calculator.i
-
-# target to preprocess a source file
-calculator.cpp.i:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator.cpp.i
-.PHONY : calculator.cpp.i
-
-calculator.s: calculator.cpp.s
-
-.PHONY : calculator.s
-
-# target to generate assembly for a file
-calculator.cpp.s:
-	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/calculator.cpp.s
-.PHONY : calculator.cpp.s
+# fast build rule for target.
+HW_5/fast:
+	$(MAKE) -f CMakeFiles/HW_5.dir/build.make CMakeFiles/HW_5.dir/build
+.PHONY : HW_5/fast
 
 helper.o: helper.cpp.o
 
@@ -209,7 +169,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/HW_5.dir/build.make CMakeFiles/HW_5.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -218,7 +178,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/HW_5.dir/build.make CMakeFiles/HW_5.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -227,7 +187,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/HW_5.dir/build.make CMakeFiles/HW_5.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -238,12 +198,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... calculator"
 	@echo "... helper"
-	@echo "... calculator.o"
-	@echo "... calculator.i"
-	@echo "... calculator.s"
+	@echo "... HW_5"
 	@echo "... helper.o"
 	@echo "... helper.i"
 	@echo "... helper.s"

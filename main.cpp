@@ -1,35 +1,52 @@
-#include "calculator.h"
+#include <iostream>
+#include <array>
+#include <climits>
+#include <cstdlib>
+#include <ctime>
 #include "helper.h"
 
-//#define USE_STRING_FUNC
+using namespace std;
 
-int main(int argc, char const *argv[])
-{
-    Calculator calculator;
+int main()
+{ 
+    cout << endl << "<<<<HOME WORK 3>>>>" << endl<< endl;
+
+    srand(static_cast<unsigned>(time(nullptr)));
+
+    cout << "=======Sorting an array=======" << endl;
+
     Helper helper;
 
-    int result = 0;
+    const int size = 20;
 
-    if (calculator.Add(1.5,2.5) != 4.0)
-      result -= 1;
+    int simpleArray[size] = {};
 
-    if (calculator.Sub(2.5,0.5) != 2.0)
-      result -= 2;
+    for (auto i = 0; i < size; i++)
+    {
+        simpleArray[i] = rand() % 100;
+    }
 
-    if (calculator.Mul(3.0,2.0) != 6.0)
-      result -= 3;
+    cout << "Random array before sorting:\t";
 
-    if (calculator.Pow(2,12) != 4096)
-      result -= 4;
+    helper.printArrayValues(simpleArray,size);
 
-    if (calculator.factorial(5) != 120)
-      result -= 5;
+    helper.sortArray(simpleArray,size);
 
-#ifdef USE_STRING_FUNC
-    helper.printString("Used USE_STRING_FUNC define and called printString function");
-#else
-    std::cout << "Called makeDouble function: "<< calculator.makeDouble(result) << "\n";
-#endif
+    cout << "The array after sorting:\t";
+
+    helper.printArrayValues(simpleArray,size);
+
+    cout << "=======Printing long type number=======" << endl;
+
+    long lnumber = rand() % LONG_MAX;
+
+    cout << "Initial random number = " << lnumber << endl;
+
+    cout << "Result of printBackwardLongRecurcive function calling: ";
+
+    helper.printBackwardLongRecurcive(lnumber);
+
+    cout << endl << endl << "To be continued..." << endl;
 
     return 0;
 }

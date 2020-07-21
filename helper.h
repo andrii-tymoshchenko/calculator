@@ -1,12 +1,12 @@
 #ifndef HELPER_H
 #define HELPER_H
 
-#include <iostream>
-
 class Helper
 {
     public:
-        void printString (const std::string&);
+        void printArrayValues (const int* arraySrc, const int size);
+        void sortArray(int* arraySrc, const int size);
+        void printBackwardLongRecurcive(long longNumer);
 };
 
 #endif//HELPER_H
