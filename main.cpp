@@ -1,35 +1,52 @@
 #include "calculator.h"
 #include "helper.h"
 
-//#define USE_STRING_FUNC
-
 int main(int argc, char const *argv[])
 {
-    Calculator calculator;
-    Helper helper;
+    helper::printString("<<<<<<HOME WORK 4>>>>>>\n");
 
-    int result = 0;
+    srand(static_cast<unsigned>(time(nullptr)));
 
-    if (calculator.Add(1.5,2.5) != 4.0)
-      result -= 1;
+    helper::printString("p.1.1 and p.1.2:\n");
+    helper::printName();
+    calculator::printName();
 
-    if (calculator.Sub(2.5,0.5) != 2.0)
-      result -= 2;
+    helper::printString("\np.2 - class Array\n");
 
-    if (calculator.Mul(3.0,2.0) != 6.0)
-      result -= 3;
+    helper::printString("Calls:\n");
 
-    if (calculator.Pow(2,12) != 4096)
-      result -= 4;
+    std::cout << "Create array1" << std::endl;
+    helper::Array array1(10,4);
+    array1.filldata();
+    std::cout << "Print array1" << std::endl;
+    array1.print();
 
-    if (calculator.factorial(5) != 120)
-      result -= 5;
+    std::cout << "Create array2:" << std::endl;
+    helper::Array array2(10,4);
+    array2.filldata();
+    std::cout << "Print array2:" << std::endl;
+    array2.print();
 
-#ifdef USE_STRING_FUNC
-    helper.printString("Used USE_STRING_FUNC define and called printString function");
-#else
-    std::cout << "Called makeDouble function: "<< calculator.makeDouble(result) << "\n";
-#endif
+    std::cout << "Result of calling 'equal' method: " << (array1.equal(array2) ? "True" : "False") << std::endl;
 
+    std::cout << "Call 'add' method" << std::endl;
+    array1.add(array2);
+    std::cout << "Print array1" << std::endl;
+    array1.print();
+
+    std::cout << "Call 'subtract' method array2 - array1" << std::endl;
+    array2.subtract(array1);
+
+    std::cout << "Print array2:" << std::endl;
+    array2.print();
+
+    std::cout << "Transpose array2" << std::endl;
+    array2.transpose();
+
+    std::cout << "Print array2:" << std::endl;
+    array2.print();
+
+
+    helper::printString("\nTo be continued...\n");
     return 0;
 }

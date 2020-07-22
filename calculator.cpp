@@ -1,21 +1,22 @@
+#include <iostream>
 #include "calculator.h"
 
-int Calculator::Add (double a, double b)
+int calculator::Add (double a, double b)
 {
     return a + b;
 }
 
-int Calculator::Sub (double a, double b)
+int calculator::Sub (double a, double b)
 {
     return Add (a, -b);
 }
 
-int Calculator::Mul (double a, double b)
+int calculator::Mul (double a, double b)
 {
     return a * b;
 }
 
-int Calculator::Pow (int a, int b)
+int calculator::Pow (int a, int b)
 {
    if (b == 0) return 1;
    if (b == 1) return a;
@@ -25,7 +26,7 @@ int Calculator::Pow (int a, int b)
    else return a * temp * temp;
 }
 
-unsigned long long Calculator::factorial (unsigned int n)
+unsigned long long calculator::factorial (unsigned int n)
 {
     unsigned long long fact = 1;
 
@@ -35,7 +36,15 @@ unsigned long long Calculator::factorial (unsigned int n)
     return fact;
 }
 
-double Calculator::makeDouble (int number)
+double calculator::makeDouble (int number)
 {
     return (double)number;
 }
+
+void calculator::printName(void)
+{
+    std::cout << __PRETTY_FUNCTION__  << std::endl;
+}
+
+
+

@@ -1,25 +1,16 @@
 cmake_minimum_required (VERSION 2.8)
 
-set (main_src
-     main.cpp)
+project(HW_6)
 
-set (calculator_src
-     calculator.cpp)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++11)
 
-set (helper_src
-     helper.cpp)
 
-if(USE_STRING_FUNC)
-   add_definitions(-DUSE_STRING_FUNC)
-endif()
+set (main_src main.cpp)
+set (calculator_src calculator.cpp)
+set (helper_src helper.cpp)
 
-if(SHAREDLIB)
-  add_library (calculator SHARED ${calculator_src})
-  add_library (helper SHARED ${helper_src})
-else()
-  add_library (calculator ${calculator_src})
-  add_library (helper ${helper_src})
-endif()
+add_library (calculator SHARED ${calculator_src})
+add_library (helper SHARED ${helper_src})
 
 add_executable(main ${main_src})
 
