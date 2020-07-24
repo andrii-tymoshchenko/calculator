@@ -1,13 +1,8 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required (VERSION 2.8)
 
-project(HW_4)
+project(HW_7)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -std=c++17)
 
-add_executable(${PROJECT_NAME} "main.cpp")
-
+add_executable(${PROJECT_NAME} main.cpp)
 

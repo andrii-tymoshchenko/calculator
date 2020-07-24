@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HW_4
+# Target rules for targets named HW_7
 
 # Build rule for target.
-HW_4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HW_4
-.PHONY : HW_4
+HW_7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HW_7
+.PHONY : HW_7
 
 # fast build rule for target.
-HW_4/fast:
-	$(MAKE) -f CMakeFiles/HW_4.dir/build.make CMakeFiles/HW_4.dir/build
-.PHONY : HW_4/fast
+HW_7/fast:
+	$(MAKE) -f CMakeFiles/HW_7.dir/build.make CMakeFiles/HW_7.dir/build
+.PHONY : HW_7/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/HW_4.dir/build.make CMakeFiles/HW_4.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/HW_7.dir/build.make CMakeFiles/HW_7.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/HW_4.dir/build.make CMakeFiles/HW_4.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/HW_7.dir/build.make CMakeFiles/HW_7.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/HW_4.dir/build.make CMakeFiles/HW_4.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/HW_7.dir/build.make CMakeFiles/HW_7.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -157,7 +157,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... HW_4"
+	@echo "... HW_7"
 	@echo "... edit_cache"
 	@echo "... main.o"
 	@echo "... main.i"
